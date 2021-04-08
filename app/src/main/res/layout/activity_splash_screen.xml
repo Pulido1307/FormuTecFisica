@@ -7,12 +7,13 @@
     android:id="@+id/activity"
     tools:context=".SplashScreen">
 
+
     <ImageView
         android:id="@+id/imageView_splash_screen"
         android:layout_width="250dp"
         android:layout_height="243dp"
 
-        android:contentDescription="Splash Screen"
+        android:contentDescription="@string/splash_screen"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -28,7 +29,7 @@
         android:layout_height="127dp"
 
 
-        android:contentDescription="Icono principal"
+        android:contentDescription="@string/icono_principal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
@@ -45,7 +46,7 @@
         android:layout_height="135dp"
 
 
-        android:contentDescription="Icono principal"
+        android:contentDescription="@string/icono_principal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.945"
@@ -64,7 +65,7 @@
         android:gravity="center|fill"
         android:justificationMode="inter_word"
         android:padding="10dp"
-        android:text="FormuTec es una app desarrollada por alumnos de la carrera de ISC del Instituto Tecnológico Superior de Uruapan."
+        android:text="@string/descripcion_app"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"

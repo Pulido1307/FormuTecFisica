@@ -2,5 +2,8 @@
     <string name="app_name">FormuTec Fisica</string>
     <string name="splash_screen">Splash Screen</string>
     <string name="icono_principal">Icono principal</string>
+    <string name="buscar">Buscar...</string>
     <string name="descripcion_app">FormuTec es una app desarrollada por alumnos de la carrera de ISC del Instituto Tecnológico Superior de Uruapan.</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="quejas_y_sugerencias">Quejas y sugerencias</string>
 </resources>

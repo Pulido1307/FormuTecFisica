@@ -51,10 +51,9 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }catch (Exception ignored){}
-        }, 4000);
+        }, 3500);
     }
-
-
+    
     @SuppressLint("WrongConstant")
     private void setInfo(){
         String titulo = "FormuTec Física";
