@@ -6,4 +6,5 @@
     <string name="descripcion_app">FormuTec es una app desarrollada por alumnos de la carrera de ISC del Instituto Tecnológico Superior de Uruapan.</string>
     <string name="acerca_de">Acerca de</string>
     <string name="quejas_y_sugerencias">Quejas y sugerencias</string>
+    <string name="magnitud">Magnitud</string>
 </resources>

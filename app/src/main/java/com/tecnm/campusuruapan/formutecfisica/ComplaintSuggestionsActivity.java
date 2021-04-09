@@ -1,4 +1,4 @@
-package com.tecnm.campusuruapan.formutecfisica.controllers;
+package com.tecnm.campusuruapan.formutecfisica;
 
 import androidx.appcompat.app.AppCompatActivity;
 
