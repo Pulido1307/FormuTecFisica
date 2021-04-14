@@ -30,6 +30,7 @@
                 app:layout_constraintGuide_percent="0.40" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_Magnitud"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -52,7 +53,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+                android:id="@+id/cardView_Valores"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="15dp"
@@ -75,16 +76,18 @@
                         app:layout_constraintBottom_toTopOf="@+id/guideline15"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:baselineAligned="false">
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout_ValorOriginal"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="10dp"
                             android:layout_weight="0.70"
-                            android:hint="Valor Original">
+                            android:hint="@string/valor_original">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
@@ -92,6 +95,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout_UnidadMedidaO"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -115,9 +119,11 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/guideline15">
+                        app:layout_constraintTop_toTopOf="@+id/guideline15"
+                        android:baselineAligned="false">
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout_ValorResultante"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -125,7 +131,7 @@
                             android:layout_marginStart="10dp"
                             android:layout_weight="0.70"
                             android:background="@android:color/transparent"
-                            android:hint="Valor Resultante">
+                            android:hint="@string/valor_resultante">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
@@ -133,6 +139,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout_UnidadMedidaD"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -159,6 +166,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_Botones"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="15dp"
@@ -168,7 +176,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/guideline12" >
+                app:layout_constraintTop_toTopOf="@+id/guideline12">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -217,10 +225,11 @@
                         app:layout_constraintGuide_percent="0.75" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_7"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="7"
+                        android:text="@string/_7"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline16"
@@ -230,38 +239,39 @@
 
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_8"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="8"
+                        android:text="@string/_8"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline16"
                         app:layout_constraintEnd_toStartOf="@+id/guideline20"
                         app:layout_constraintStart_toStartOf="@+id/guideline19"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:rippleColor=" @Override     public boolean onCreateOptionsMenu(Menu menu)     {         getMenuInflater().inflate(R.menu.menu,menu);        return true;     }">
+                        app:layout_constraintTop_toTopOf="parent">
 
                     </com.google.android.material.button.MaterialButton>
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_9"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:backgroundTint="@color/colorwhite"
+                        android:text="@string/_9"
+                        android:textColor="#0047BA"
+                        android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline16"
                         app:layout_constraintEnd_toStartOf="@+id/guideline21"
                         app:layout_constraintStart_toStartOf="@+id/guideline20"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:backgroundTint="@color/colorwhite"
-                        android:text="9"
-                        android:textColor="#0047BA"
-                        android:textSize="20sp"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/materialButton"
+                        android:id="@+id/button_4"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="4"
+                        android:text="@string/_4"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -272,11 +282,11 @@
                     </com.google.android.material.button.MaterialButton>
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/materialButton2"
+                        android:id="@+id/button_5"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="5"
+                        android:text="@string/_5"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -285,10 +295,11 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_6"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="6"
+                        android:text="@string/_6"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -297,10 +308,11 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline16"></com.google.android.material.button.MaterialButton>
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_1"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="1"
+                        android:text="@string/_1"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -309,11 +321,11 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/materialButton3"
+                        android:id="@+id/button_2"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="2"
+                        android:text="@string/_2"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -322,11 +334,11 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/materialButton4"
+                        android:id="@+id/button_3"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="3"
+                        android:text="@string/_3"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -335,10 +347,11 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_punto"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="."
+                        android:text="@string/punto"
                         android:textColor="#0047BA"
                         android:textSize="40sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -347,10 +360,11 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_0"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="0"
+                        android:text="@string/_0"
                         android:textColor="#0047BA"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -359,13 +373,14 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_flechaBorrar"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"
-                        android:text="←"
+                        android:text="@string/flecha_borrar"
                         android:textAlignment="center"
                         android:textColor="#0047BA"
-                        android:textSize="40dp"
+                        android:textSize="40sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/guideline21"
@@ -373,10 +388,10 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/materialButton6"
+                        android:id="@+id/button_ac"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text="AC"
+                        android:text="@string/ac"
                         android:textSize="35sp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline17"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -384,9 +399,10 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_igual"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text="="
+                        android:text="@string/igual"
                         android:textColor="@color/colorwhite"
                         android:textSize="35sp"
                         app:layout_constraintBottom_toBottomOf="parent"

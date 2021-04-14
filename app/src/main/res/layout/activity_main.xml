@@ -18,17 +18,18 @@
             app:layout_constraintGuide_percent="0.90" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView_InfoElaboracion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="App realizada en el TecNM campus Uruapan y \n las academias CB e ISC"
+            android:text="@string/info_elaboracion"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_TemasFisica"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="5dp"
@@ -40,7 +41,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/floatingActionButton_Conversor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
@@ -49,5 +50,7 @@
         android:clickable="true"
         app:backgroundTint="@color/colorPrimaryDark"
         app:srcCompat="@drawable/formutecfis"
-        app:tint="@color/white" />
+        app:tint="@color/white"
+        android:contentDescription="@string/todo"
+        android:focusable="true" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

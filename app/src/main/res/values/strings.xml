@@ -7,4 +7,29 @@
     <string name="acerca_de">Acerca de</string>
     <string name="quejas_y_sugerencias">Quejas y sugerencias</string>
     <string name="magnitud">Magnitud</string>
+    <string name="valor_original">Valor Original</string>
+    <string name="_4">4</string>
+    <string name="valor_resultante">Valor Resultante</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="punto">.</string>
+    <string name="_0">0</string>
+    <string name="flecha_borrar">←</string>
+    <string name="ac">AC</string>
+    <string name="igual">=</string>
+    <string name="queja">Queja</string>
+    <string name="sugerencia">Sugerencia</string>
+    <string name="enviar">Enviar</string>
+    <string name="mensaje">Mensaje</string>
+    <string name="nombre">Nombre</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="contactanos">Contáctanos</string>
+    <string name="info_elaboracion">App realizada en el TecNM campus Uruapan y \n las academias CB e ISC</string>
+    <string name="todo">TODO</string>
 </resources>
