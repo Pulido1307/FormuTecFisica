@@ -40,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.item_quejas_sugerencias:
-                Toast.makeText(MainActivity.this, "Quejas y sugerencias...", Toast.LENGTH_SHORT).show();
+                /*Toast.makeText(MainActivity.this, "Quejas y sugerencias...", Toast.LENGTH_SHORT).show();
                 intent = new Intent(MainActivity.this, ComplaintSuggestionsActivity.class);
+                startActivity(intent);*/
+                intent = new Intent(MainActivity.this, Formulas.class);
                 startActivity(intent);
                 break;
         }
