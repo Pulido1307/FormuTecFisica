@@ -5,21 +5,127 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Subtemas {
-    public static List<String> algebra = new ArrayList<>(Arrays.asList(
-            "Propiedades aritméticas",
-            "Propiedades de los radicales",
-            "Propiedades de los exponentes",
-            "Propiedades de los logatirmos",
-            "Propiedades de las desigualdades",
-            "Propiedades de factorizaciones comunes",
-            "Propiedades de productos notables",
-            "Propiedades de factores notables",
-            "Teorema del binomio",
-            "Propiedades de soluciones exactas de ecuaciones algebráicas",
-            "Propiedades del valor absoluto",
-            "Propiedades de sumatoria y productoria",
-            "Constantes (π, e, φ (phi) )",
-            "Serie de Taylor",
-            "Serie de Maclaurin",
-            "Series de potencias"));
+    public static List<String> cinematica = new ArrayList<>(Arrays.asList(
+            "Aceleración centrípeta",
+            "Aceleración constante",
+            "Aceleración media",
+            "Caída libre",
+            "El péndulo simple",
+            "Movimiento circular uniforme",
+            "Movimiento de proyectiles",
+            "Movimiento rectilíneo uniformemente acelerado",
+            "Tiro vertical",
+            "Velocidad",
+            "Velocidad angular media",
+            "Velocidad instantánea",
+            "Velocidad promedio"));
+
+    public static List<String> constantes = new ArrayList<>(Arrays.asList(
+            "Constantes"));
+
+    public static List<String> dinamica = new ArrayList<>(Arrays.asList(
+            "Cantidad de movimiento",
+            "El oscilador armonico simple",
+            "Fricción por desplazamiento",
+            "Ley de la conservación de la cantidad de movimiento",
+            "Movimiento armónico simple",
+            "Peso",
+            "Segunda ley de Newton",
+            "Tercera ley de Newton"));
+
+    public static List<String> electricidad = new ArrayList<>(Arrays.asList(
+            "Campo eléctrico",
+            "Capacitancia",
+            "Capacitores en serie",
+            "Circuito RC",
+            "Circuitos eléctricos en paralelo",
+            "Circuitos eléctricos en serie",
+            "Corriente y resistencia eléctrica",
+            "Flujo eléctrico",
+            "Fuerza electromotriz",
+            "Intensidad del C. E.",
+            "Ley de Coulomb",
+            "Ley de Gauss",
+            "Ley de Joule",
+            "Ley de Kirchhoff",
+            "Ley de Ohm",
+            "Ley de Watt",
+            "Permitividad relativa",
+            "Potencia eléctrica",
+            "Potencial eléctrico",
+            "Resistencias en serie",
+            "Voltaje"));
+
+    public static List<String> electromagnetismo = new ArrayList<>(Arrays.asList(
+            "Campo magnético producido por un conductor recto",
+            "Campo magnético producido por un solenoide",
+            "Circuitos CA",
+            "Ecuaciones de Maxwell",
+            "Fuerza magnética sobre una corriente",
+            "Inductancia mutua",
+            "Ley de Ampere",
+            "Ley de inducción de Faraday",
+            "Ondas electromagnéticas"));
+
+    public static List<String> equivalencias = new ArrayList<>(Arrays.asList(
+            "Densidad",
+            "Energía",
+            "Longitud",
+            "Masa",
+            "Potencia",
+            "Presión",
+            "Superficie",
+            "Volumen"
+            ));
+
+    public static List<String> estatica = new ArrayList<>(Arrays.asList(
+            "Eficiencia",
+            "Equilibrio",
+            "Momentos de torsión",
+            "Rotación de cuerpos rígidos"));
+
+    public static List<String> hidrodinamica = new ArrayList<>(Arrays.asList(
+            "Hidrodinámica"));
+
+    public static List<String> hidrostatica = new ArrayList<>(Arrays.asList(
+            "Hidrostática"));
+
+    public static List<String> optica = new ArrayList<>(Arrays.asList(
+            "Forma gaussiana",
+            "Forma newtoniana",
+            "Lentes",
+            "Ley de la iluminación",
+            "Reflexión de la luz",
+            "Refracción de la luz"));
+
+    public static List<String> termodinamica = new ArrayList<>(Arrays.asList(
+            "1era Ley de la termodinámica",
+            "2da Ley de la termodinámica",
+            "Calor",
+            "Capacidad calorífica",
+            "Conversión de escalas de temperatura",
+            "Corriente de calor",
+            "Dilatación térmica",
+            "Ecuación de un gas ideal",
+            "Entalpía",
+            "Entropía",
+            "Formulas complementarias",
+            "Ley de Carnot",
+            "Ley de los gases",
+            "Trabajo de expansión y compresión",
+            "Transferencia de temperatura"));
+
+    public static List<String> vectores = new ArrayList<>(Arrays.asList(
+            "Derivación de vectores",
+            "Integración de un vector",
+            "Ley de senos y cosenos",
+            "Más de dos vectores",
+            "Método del polígono",
+            "Producto escalar o punto",
+            "Producto escalar triple",
+            "Producto vectorial",
+            "Propiedades de los vectores",
+            "Regla de la mano derecha",
+            "Suma de vectores"));
+
 }

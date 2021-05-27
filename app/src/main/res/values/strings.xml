@@ -33,5 +33,16 @@
     <string name="info_elaboracion">App realizada en el TecNM campus Uruapan y \n las academias CB e ISC</string>
     <string name="todo">TODO</string>
     <string name="tema">Tema</string>
-    <string name="Cinemática">Cinematica</string>
+    <string name="Cinematica">Cinemática</string>
+    <string name="Constantes">Constantes</string>
+    <string name="Dinamica">Dinámica </string>
+    <string name="Electricidad">Electricidad</string>
+    <string name="Electromagnetismo">Electromagnetismo</string>
+    <string name="Equivalencias">Equivalencias</string>
+    <string name="Estatica">Estática</string>
+    <string name="Hidrodinamica">Hidrodinámica</string>
+    <string name="Hidrostatica">Hidrostática</string>
+    <string name="Optica">Óptica</string>
+    <string name="Termodinamica">Termodinámica</string>
+    <string name="Vectores">Vectores</string>
 </resources>
