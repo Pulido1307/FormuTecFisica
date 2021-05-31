@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FormuTecFisica">
-        <activity android:name=".Formulas"></activity>
+        <activity android:name=".About"></activity>
+        <activity android:name=".Formulas" />
         <activity android:name=".ConversorActivity" />
         <activity android:name=".ComplaintSuggestionsActivity" />
         <activity android:name=".SplashScreen">

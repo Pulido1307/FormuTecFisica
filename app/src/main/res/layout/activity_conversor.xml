@@ -86,12 +86,13 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="10dp"
-                            android:layout_weight="0.70"
+                            android:layout_weight="0.62"
                             android:hint="@string/valor_original">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:editable="false" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -102,7 +103,7 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
-                            android:layout_weight="0.25">
+                            android:layout_weight="0.35">
 
                             <AutoCompleteTextView
                                 android:layout_width="match_parent"
@@ -129,24 +130,25 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="10dp"
-                            android:layout_weight="0.70"
+                            android:layout_weight="0.62"
                             android:background="@android:color/transparent"
                             android:hint="@string/valor_resultante">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:editable="false" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textInputLayout_UnidadMedidaD"
+                            android:id="@+id/textInputLayout_UnidadMedidaR"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
-                            android:layout_weight="0.25">
+                            android:layout_weight="0.35">
 
                             <AutoCompleteTextView
                                 android:layout_width="match_parent"
@@ -373,7 +375,7 @@
                         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button_flechaBorrar"
+                        android:id="@+id/button_backspace"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:backgroundTint="@color/colorwhite"

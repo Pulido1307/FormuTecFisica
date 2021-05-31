@@ -8,20 +8,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.tecnm.campusuruapan.formutecfisica.Adaptadores.AdaptadorTema;
 import com.tecnm.campusuruapan.formutecfisica.Auxiliares.LlenarRecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView_Temas;
+    private FloatingActionButton floatingActionButton_Conversor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView_Temas= findViewById(R.id.recyclerView_TemasFisica);
+        floatingActionButton_Conversor = findViewById(R.id.floatingActionButton_Conversor);
         initRecyclerView();
+
+        floatingActionButton_Conversor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ConversorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private  void initRecyclerView()
@@ -51,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.item_about:
                 Toast.makeText(MainActivity.this, "Acerca de...", Toast.LENGTH_SHORT).show();
-                intent = new Intent(MainActivity.this, ConversorActivity.class);
+                intent = new Intent(MainActivity.this, About.class);
                 startActivity(intent);
                 break;
 
