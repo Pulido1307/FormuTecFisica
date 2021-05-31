@@ -85,6 +85,8 @@ public class Masa extends Magnitud {
             } else if(operacion.equals("t,tc")){
                 opc = new BigDecimal(valorOriginal);
                 return (opc.multiply(BigDecimal.valueOf(1.102)).toPlainString());
+            } else if(operacion.equals("g,g") || operacion.equals("kg,kg") || operacion.equals("oz,oz") || operacion.equals("lb,lb") || operacion.equals("tc,tc") || operacion.equals("t,t")){
+                return valorOriginal;
             }
 
         return (nf.format(aux));

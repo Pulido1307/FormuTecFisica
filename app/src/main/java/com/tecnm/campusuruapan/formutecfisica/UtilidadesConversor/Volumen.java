@@ -47,6 +47,9 @@ public class Volumen extends Magnitud {
                 aux = Double.parseDouble(valorOriginal) / 28.317;
             } else if(operacion.equals("l,gal")){
                 aux = Double.parseDouble(valorOriginal) / 3.785;
+            } else if(operacion.equals("cm³,cm³") || operacion.equals("m³,m³") || operacion.equals("l,l") || operacion.equals("in³,in³") || operacion.equals("ft³,ft³")
+                    || operacion.equals("gal,gal")){
+                return valorOriginal;
             }
 
 

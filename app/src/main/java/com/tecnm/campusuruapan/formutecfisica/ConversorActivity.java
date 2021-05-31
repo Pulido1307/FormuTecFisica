@@ -245,7 +245,6 @@ public class ConversorActivity extends AppCompatActivity implements View.OnClick
         textInputLayout_UnidadMedidaO.setError(null);
 
         if(!textInputLayout_UnidadMedidaO.getEditText().getText().toString().equals("") && !textInputLayout_UnidadMedidaR.getEditText().getText().toString().equals("")){
-            if(!textInputLayout_UnidadMedidaO.getEditText().getText().equals(textInputLayout_UnidadMedidaR.getEditText().getText())){
                 String valor = textInputLayout_ValorOriginal.getEditText().getText().toString();
                 String operacion = textInputLayout_UnidadMedidaO.getEditText().getText()+","+textInputLayout_UnidadMedidaR.getEditText().getText();
                 String resultante = "";
@@ -288,7 +287,7 @@ public class ConversorActivity extends AppCompatActivity implements View.OnClick
                         resultante = new Tiempo().getConversion(valor, operacion);
                         break;
 
-                    case "Velociadad":
+                    case "Velocidad":
                         resultante = new Velocidad().getConversion(valor,operacion);
                         break;
 
@@ -298,9 +297,7 @@ public class ConversorActivity extends AppCompatActivity implements View.OnClick
                 }
 
                 textInputLayout_ValorResultante.getEditText().setText(resultante+"");
-            } else {
-                textInputLayout_ValorResultante.getEditText().setText(textInputLayout_ValorOriginal.getEditText().getText());
-            }
+
         }else{
             textInputLayout_UnidadMedidaR.setError("Obligatorio");
             textInputLayout_UnidadMedidaO.setError("Obligatorio");

@@ -92,7 +92,10 @@ public class Velocidad extends Magnitud{
             case "mph,kn":
                 aux = Double.parseDouble(valorOriginal) / 1.151;
                 break;
+        }
 
+        if(operacion.equals("m/s,m/s") || operacion.equals("km/h,km/h") || operacion.equals("km/s,km/s") || operacion.equals("kn,kn") || operacion.equals("mph,mph")){
+            return valorOriginal;
         }
 
         return (nf.format(aux));

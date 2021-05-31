@@ -133,6 +133,10 @@ public class Longitud extends Magnitud {
                 return (opc.multiply(BigDecimal.valueOf(1760.0)).toPlainString());
         }
 
+        if (operacion.equals("cm,cm") || operacion.equals("m,m") || operacion.equals("in,in") || operacion.equals("ft,ft") || operacion.equals("yd,yd") || operacion.equals("mi,mi")){
+            return valorOriginal;
+        }
+
 
         return (nf.format(aux));
     }

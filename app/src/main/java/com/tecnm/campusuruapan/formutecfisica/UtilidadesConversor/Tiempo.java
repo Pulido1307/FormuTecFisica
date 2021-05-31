@@ -62,7 +62,10 @@ public class Tiempo extends Magnitud {
             case "h,min":
                 aux = Double.parseDouble(valorOriginal) * 60.0;
                 break;
+        }
 
+        if(operacion.equals("ms,ms") || operacion.equals("s,s") || operacion.equals("min,min") || operacion.equals("h,h")){
+            return valorOriginal;
         }
 
 

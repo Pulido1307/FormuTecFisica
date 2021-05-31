@@ -182,6 +182,11 @@ public class Presion extends Magnitud{
                 return (opc.multiply(BigDecimal.valueOf(2.036)).toPlainString());
         }
 
+        if(operacion.equals("dina/cm²,dina/cm²") || operacion.equals("N/m²,N/m²") || operacion.equals("atm,atm") || operacion.equals("kg/cm²,kg/cm²") || operacion.equals("mm Hg,mm Hg")
+        || operacion.equals("in Hg,in Hg") || operacion.equals("lb/in²")){
+            return valorOriginal;
+        }
+
         return (nf.format(aux));
     }
 }

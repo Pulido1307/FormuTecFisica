@@ -22,6 +22,10 @@ public class Potencia extends Magnitud {
 
         }
 
+        if(operacion.equals("kcal/s,kcal/s") || operacion.equals("Btu/hr,Btu/hr")){
+            return valorOriginal;
+        }
+
         return (nf.format(aux));
     }
 }

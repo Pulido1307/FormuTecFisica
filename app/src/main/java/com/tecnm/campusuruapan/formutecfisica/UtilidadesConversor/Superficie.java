@@ -113,6 +113,10 @@ public class Superficie extends Magnitud {
 
         }
 
+        if (operacion.equals("cm²,cm²") || operacion.equals("m²") || operacion.equals("in²,in²") || operacion.equals("ft²,ft²") || operacion.equals("yd²,yd²") || operacion.equals("mi²,mi²")){
+            return valorOriginal;
+        }
+
 
         return (nf.format(aux));
     }

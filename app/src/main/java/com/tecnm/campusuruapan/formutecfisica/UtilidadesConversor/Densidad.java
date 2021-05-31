@@ -62,6 +62,10 @@ public class Densidad extends Magnitud {
                 return (opc.multiply(BigDecimal.valueOf(7.481)).toPlainString());
         }
 
+        if(operacion.equals("g/cm³,g/cm³") || operacion.equals("kg/m³,kg/m³") || operacion.equals("lb/ft³,lb/ft³") || operacion.equals("lb/galón,lb/galón")){
+            return valorOriginal;
+        }
+
         return (nf.format(aux));
     }
 }
