@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -75,12 +76,11 @@ public class AdaptadorTema extends RecyclerView.Adapter<AdaptadorTema.TemaViewHo
                 notifyItemChanged(getAdapterPosition());
             });
 
-            listView_ListaSubtemas.setOnItemClickListener((adapterView, view2, i, l) -> {
-                String nombreTema = itemView.getContext().getResources().getString(listaTemas.get(getAdapterPosition()).getTema());
+            listView_ListaSubtemas.setOnItemClickListener((AdapterView<?> adapterView, View view2, int i, long l) -> {
+                String tema = itemView.getContext().getResources().getString(listaTemas.get(getAdapterPosition()).getTema());
                 Intent intent = new Intent(itemView.getContext(), Formulas.class);
-                intent.putExtra("nombreTema",nombreTema);
-                intent.putExtra("tema",getAdapterPosition());
-                intent.putExtra("subtema",i);
+                intent.putExtra("tema",tema);
+                intent.putExtra("subtema", listView_ListaSubtemas.getItemAtPosition(i).toString());
                 itemView.getContext().startActivity(intent);
 
             });

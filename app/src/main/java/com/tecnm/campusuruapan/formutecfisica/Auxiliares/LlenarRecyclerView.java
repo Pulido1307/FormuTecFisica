@@ -19,7 +19,7 @@ public class LlenarRecyclerView {
         listaTemas.add(new Tema(R.drawable.equivalencias,R.string.Equivalencias, Subtemas.equivalencias));
         listaTemas.add(new Tema(R.drawable.estatica,R.string.Estatica, Subtemas.estatica));
         listaTemas.add(new Tema(R.drawable.hidrodinamica,R.string.Hidrodinamica, Subtemas.hidrodinamica));
-        listaTemas.add(new Tema(R.drawable.hidrodinamica,R.string.Hidrostatica, Subtemas.hidrostatica));
+        listaTemas.add(new Tema(R.drawable.hidrostatica,R.string.Hidrostatica, Subtemas.hidrostatica));
         listaTemas.add(new Tema(R.drawable.optica,R.string.Optica, Subtemas.optica));
         listaTemas.add(new Tema(R.drawable.termodinamica,R.string.Termodinamica, Subtemas.termodinamica));
         listaTemas.add(new Tema(R.drawable.vectores,R.string.Vectores, Subtemas.vectores));

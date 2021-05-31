@@ -2,9 +2,13 @@ package com.tecnm.campusuruapan.formutecfisica;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.github.barteksc.pdfviewer.PDFView;
+
+import java.util.Objects;
 
 public class Formulas extends AppCompatActivity {
 
@@ -13,12 +17,18 @@ public class Formulas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_formulas);
-        setTitle("Algebra de Vectores");
+
+        Intent intent = getIntent();
+        String tema = Objects.requireNonNull(Objects.requireNonNull(intent.getExtras()).get("tema")).toString();
+        String subtema = Objects.requireNonNull(Objects.requireNonNull(intent.getExtras()).get("subtema")).toString();
+        Log.e("Valores ",tema +", "+subtema);
 
         pdfView = findViewById(R.id.pdfView);
+        setContentView(R.layout.activity_formulas);
+        setTitle(tema);
 
-        String file = "Ley de coulomb.pdf";
+        String file = subtema+".pdf";
+        Log.e("Valores ",file);
         pdfView.fromAsset(file)
                 .enableSwipe(true) // allows to block changing pages using swipe
                 .swipeHorizontal(false)
@@ -29,5 +39,6 @@ public class Formulas extends AppCompatActivity {
                 // spacing between pages in dp. To define spacing color, set view background
                 .spacing(0)
                 .load();
+
     }
 }
