@@ -91,11 +91,11 @@ public class Energia extends Magnitud{
             case "kw-hr,Btu":
                 opc = new BigDecimal(valorOriginal);
                 return (opc.multiply(BigDecimal.valueOf(3412.0)).toPlainString());
+
+            default:
+                return valorOriginal;
         }
 
-        if(operacion.equals("J,J") || operacion.equals("cal,cal") || operacion.equals("kcal,kcal") || operacion.equals("Btu,Btu") || operacion.equals("kw-hr")){
-            return valorOriginal;
-        }
 
         return (nf.format(aux));
     }

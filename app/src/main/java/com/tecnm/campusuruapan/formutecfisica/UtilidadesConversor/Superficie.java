@@ -111,11 +111,11 @@ public class Superficie extends Magnitud {
                 opc = new BigDecimal(valorOriginal);
                 return (opc.multiply(BigDecimal.valueOf(3098000.0)).toPlainString());
 
+            default:
+                return valorOriginal;
         }
 
-        if (operacion.equals("cm²,cm²") || operacion.equals("m²") || operacion.equals("in²,in²") || operacion.equals("ft²,ft²") || operacion.equals("yd²,yd²") || operacion.equals("mi²,mi²")){
-            return valorOriginal;
-        }
+
 
 
         return (nf.format(aux));

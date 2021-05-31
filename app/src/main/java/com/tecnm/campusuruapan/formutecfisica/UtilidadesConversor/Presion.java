@@ -180,12 +180,12 @@ public class Presion extends Magnitud{
             case "lb/in²,in Hg":
                 opc = new BigDecimal(valorOriginal);
                 return (opc.multiply(BigDecimal.valueOf(2.036)).toPlainString());
+
+            default:
+                return valorOriginal;
         }
 
-        if(operacion.equals("dina/cm²,dina/cm²") || operacion.equals("N/m²,N/m²") || operacion.equals("atm,atm") || operacion.equals("kg/cm²,kg/cm²") || operacion.equals("mm Hg,mm Hg")
-        || operacion.equals("in Hg,in Hg") || operacion.equals("lb/in²")){
-            return valorOriginal;
-        }
+
 
         return (nf.format(aux));
     }

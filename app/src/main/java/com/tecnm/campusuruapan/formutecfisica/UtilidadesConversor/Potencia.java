@@ -20,11 +20,12 @@ public class Potencia extends Magnitud {
                 aux = Double.parseDouble(valorOriginal) / 14276.0;
                 break;
 
+            default:
+                return valorOriginal;
+
         }
 
-        if(operacion.equals("kcal/s,kcal/s") || operacion.equals("Btu/hr,Btu/hr")){
-            return valorOriginal;
-        }
+
 
         return (nf.format(aux));
     }

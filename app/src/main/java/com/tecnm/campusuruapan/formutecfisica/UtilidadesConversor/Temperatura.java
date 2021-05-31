@@ -52,6 +52,7 @@ public class Temperatura extends Magnitud{
             case "°R,K":
                 return (Double.parseDouble(valorOriginal)*(5.0/9.0))+"";
 
+
         }
 
         if (operacion.equals("°C,°C") || operacion.equals("°F,°F") || operacion.equals("K,K") || operacion.equals("°R,°R")){

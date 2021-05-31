@@ -60,11 +60,12 @@ public class Densidad extends Magnitud {
             case "lb/galón,lb/ft³":
                 opc = new BigDecimal(valorOriginal);
                 return (opc.multiply(BigDecimal.valueOf(7.481)).toPlainString());
+
+            default:
+                return valorOriginal;
         }
 
-        if(operacion.equals("g/cm³,g/cm³") || operacion.equals("kg/m³,kg/m³") || operacion.equals("lb/ft³,lb/ft³") || operacion.equals("lb/galón,lb/galón")){
-            return valorOriginal;
-        }
+
 
         return (nf.format(aux));
     }
