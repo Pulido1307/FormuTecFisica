@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
+import com.tecnm.campusuruapan.formutecfisica.Auxiliares.Credenciales;
 import com.tecnm.campusuruapan.formutecfisica.Auxiliares.EnviarEmail;
 import com.tecnm.campusuruapan.formutecfisica.R;
 
@@ -29,6 +30,7 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
     private MaterialButton button_Enviar;
     private String nombre, email, mensaje;
     boolean tipo;
+    boolean valido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,22 +49,28 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
             nombre = editText_Nombre.getEditText().getText().toString();
             email = editText_Email.getEditText().getText().toString();
             mensaje = editText_Mensaje.getEditText().getText().toString();
-            tipo = evaluarEmailPattern(email);
-            if (tipo) {
-                if (!nombre.equals("") && !mensaje.equals("")) {
+            valido = evaluarEmailPattern(email);
+
+            if (!nombre.equals("")) {
+                if (valido) {
                     if (radioButton_Sugerencia.isChecked() || radioButton_Queja.isChecked()) {
-                        tipo = radioButton_Queja.isChecked();
-                        sendEmailWithGmail(email, mensaje, nombre, tipo);
-                        cleanCasillas();
+                        if (!mensaje.equals("")) {
+                            tipo = radioButton_Queja.isChecked();
+                            sendEmailWithGmail(email, mensaje, nombre, tipo);
+                            cleanCasillas();
+                        } else {
+                            Snackbar.make(view, " El campo de mensaje esta vacío", Snackbar.LENGTH_SHORT).show();
+                        }
                     } else {
-                        Snackbar.make(view, "Tiene que seleccionar queja o sugerencia", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(view, "Tiene que seleccionar queja o sugerencia.", Snackbar.LENGTH_SHORT).show();
                     }
                 } else {
-                    Snackbar.make(view, "Nombre o mensaje están vacíos", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(view, "El email introducido no es una dirección valida", Snackbar.LENGTH_SHORT).show();
                 }
             } else {
-                Snackbar.make(view, "El email introducido no es una dirección valida", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(view, " El campo de nombre esta vacío", Snackbar.LENGTH_SHORT).show();
             }
+
         });
 
     }
@@ -77,12 +85,12 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
 
         Session session = Session.getDefaultInstance(props, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("", "");
+                return new PasswordAuthentication(Credenciales.email, Credenciales.password);
             }
         });
 
-        /*EnviarEmail enviarEmail = new EnviarEmail(session,StaticsMenus.EMAILSENDER,to,message,ComplaintSuggestionsActivity.this,nombre,tipo);
-        enviarEmail.execute();*/
+        EnviarEmail enviarEmail = new EnviarEmail(session, Credenciales.email, to, message, ComplaintSuggestionsActivity.this, nombre, tipo);
+        enviarEmail.execute();
     }
 
     public boolean evaluarEmailPattern(String email) {

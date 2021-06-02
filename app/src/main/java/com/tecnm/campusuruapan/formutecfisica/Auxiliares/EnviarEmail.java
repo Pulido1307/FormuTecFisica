@@ -37,7 +37,7 @@ public class EnviarEmail extends AsyncTask<String, String, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        progressDialog = ProgressDialog.show(complaintSuggestionsActivity, "Enviando", "Espere", true);
+        progressDialog = ProgressDialog.show(complaintSuggestionsActivity, "Enviando...", "Espere un momento", true);
         progressDialog.setCancelable(false);
     }
 
@@ -58,9 +58,9 @@ public class EnviarEmail extends AsyncTask<String, String, String> {
                             htmlText2 +
                             "<hr>" +
                             "<p ALIGN=\"justify\"><font size=3 face=\"Sans Serif,arial,verdana\">" + "Agradecemos tu colaboración <strong>" + nombre +
-                            "</strong> evaluaremos la petición y tendremos pronta respuesta a tu petición" + "</font></p>" +
+                            "</strong> evaluaremos la petición y tendremos pronta respuesta a tu petición." + "</font></p>" +
                             "<p ALIGN=\"justify\"><font size=3 face=\"Sans Serif,arial,verdana\">Saludos cordiales,</font></p>" +
-                            "<p><font size=3 face=\"Sans Serif,arial,verdana\">El equipo </font><font color=\"#2B53A3\" size=3 face=\"Sans Serif,arial,verdana\">FormuTec</font></p>" +
+                            "<p><font size=3 face=\"Sans Serif,arial,verdana\">El equipo de </font><font color=\"#2B53A3\" size=3 face=\"Sans Serif,arial,verdana\">FormuTec Física</font></p>" +
                             "<br>" +
                             "<hr>" +
 
@@ -83,14 +83,12 @@ public class EnviarEmail extends AsyncTask<String, String, String> {
             String htmlText3 = "<body> " +
                     "<hr>" +
                     "<p ALIGN=\"justify\"><font size=3 face=\"Sans Serif,arial,verdana\">" + "Petición de <strong>" + nombre + " " + to +
-                    "</strong>, la cual menciona que(" + tipo + "): " + "</font></p>" +
+                    "</strong>, la cual menciona que (" + tipo + "): " + "</font></p>" +
                     "<p ALIGN=\"center\"><font size=3 face=\"Sans Serif,arial,verdana\">" + message + "</font></p>" +
-                    "<p><font size=3 face=\"Sans Serif,arial,verdana\">El equipo </font><font color=\"#2B53A3\" size=3 face=\"Sans Serif,arial,verdana\">FormuTec Física</font></p>" +
                     "<br>" +
                     "<hr>" +
 
-                    "<footer>" +
-                    "<p><font color=\"#C5BFBF\" size=2 face=\"Sans Serif,arial,verdana\">Gracias!!</font></p>" +
+                    "<footer>"+
                     "<p ALIGN=\"justify\"><font color=\"#C5BFBF\" size=1 face=\"Sans Serif,arial,verdana\">©FormuTec from Instituto Tecnológico Superior de Uruapan, Carretera Uruapan-Carapan No. 5555 Col. La Basilia Uruapan, Michoacán.</font></p>" +
                     "</footer>" +
                     "</body>";
@@ -99,7 +97,7 @@ public class EnviarEmail extends AsyncTask<String, String, String> {
 
             Transport.send(mimeMessage2);
         } catch (Exception e) {
-            Toast.makeText(complaintSuggestionsActivity, "Correo electrónico invalido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(complaintSuggestionsActivity, "Correo electrónico no valido", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
             return e.getMessage();
         }
@@ -115,6 +113,6 @@ public class EnviarEmail extends AsyncTask<String, String, String> {
     @Override
     protected void onPostExecute(String result) {
         progressDialog.dismiss();
-        Toast.makeText(complaintSuggestionsActivity, "Mensaje se ha enviado satisfactoriamente", Toast.LENGTH_LONG).show();
+        Toast.makeText(complaintSuggestionsActivity, "El mensaje se ha enviado satisfactoriamente", Toast.LENGTH_LONG).show();
     }
 }
