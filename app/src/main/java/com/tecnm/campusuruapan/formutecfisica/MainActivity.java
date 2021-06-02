@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        recyclerView_Temas= findViewById(R.id.recyclerView_TemasFisica);
+        recyclerView_Temas = findViewById(R.id.recyclerView_TemasFisica);
         floatingActionButton_Conversor = findViewById(R.id.floatingActionButton_Conversor);
         initRecyclerView();
 
@@ -37,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private  void initRecyclerView()
-    {
+    private void initRecyclerView() {
         LlenarRecyclerView llenarRecyclerView = new LlenarRecyclerView();
 
         //Se utiliza esta linea por que sabe que el contenido no cambia en el recyclerView
@@ -52,16 +52,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.opc,menu);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.opc, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         Intent intent;
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.item_about:
                 Toast.makeText(MainActivity.this, "Acerca de...", Toast.LENGTH_SHORT).show();
                 intent = new Intent(MainActivity.this, About.class);

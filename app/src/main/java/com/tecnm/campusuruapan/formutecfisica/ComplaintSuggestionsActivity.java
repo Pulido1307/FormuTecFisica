@@ -23,9 +23,9 @@ import javax.mail.Session;
 
 public class ComplaintSuggestionsActivity extends AppCompatActivity {
 
-    private String EXREGEMAIL="([a-z,0-9]+((\\.|_|-)[a-z0-9]+)*)@([a-z,0-9]+(\\.[a-z0-9]+)*)\\.([a-z]{2,})(\\.([a-z]{2}))?";
-    private TextInputLayout editText_Nombre,editText_Email,editText_Mensaje;
-    private RadioButton radioButton_Queja,radioButton_Sugerencia;
+    private String EXREGEMAIL = "([a-z,0-9]+((\\.|_|-)[a-z0-9]+)*)@([a-z,0-9]+(\\.[a-z0-9]+)*)\\.([a-z]{2,})(\\.([a-z]{2}))?";
+    private TextInputLayout editText_Nombre, editText_Email, editText_Mensaje;
+    private RadioButton radioButton_Queja, radioButton_Sugerencia;
     private MaterialButton button_Enviar;
     private String nombre, email, mensaje;
     boolean tipo;
@@ -47,33 +47,27 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
             nombre = editText_Nombre.getEditText().getText().toString();
             email = editText_Email.getEditText().getText().toString();
             mensaje = editText_Mensaje.getEditText().getText().toString();
-            tipo=evaluarEmailPattern(email);
-            if(tipo)
-            {
-                if (!nombre.equals("")  && !mensaje.equals(""))
-                {
-                    if (radioButton_Sugerencia.isChecked() || radioButton_Queja.isChecked())
-                    {
+            tipo = evaluarEmailPattern(email);
+            if (tipo) {
+                if (!nombre.equals("") && !mensaje.equals("")) {
+                    if (radioButton_Sugerencia.isChecked() || radioButton_Queja.isChecked()) {
                         tipo = radioButton_Queja.isChecked();
                         sendEmailWithGmail(email, mensaje, nombre, tipo);
                         cleanCasillas();
-                    }
-                    else {
+                    } else {
                         Snackbar.make(view, "Tiene que seleccionar queja o sugerencia", Snackbar.LENGTH_SHORT).show();
                     }
-                }
-                else {
+                } else {
                     Snackbar.make(view, "Nombre o mensaje están vacíos", Snackbar.LENGTH_SHORT).show();
                 }
-            }
-            else
-            {
+            } else {
                 Snackbar.make(view, "El email introducido no es una dirección valida", Snackbar.LENGTH_SHORT).show();
             }
         });
 
     }
-    private void sendEmailWithGmail(String to, String message,String nombre, boolean tipo) {
+
+    private void sendEmailWithGmail(String to, String message, String nombre, boolean tipo) {
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.socketFactory.port", "465");
@@ -90,38 +84,32 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
         /*EnviarEmail enviarEmail = new EnviarEmail(session,StaticsMenus.EMAILSENDER,to,message,ComplaintSuggestionsActivity.this,nombre,tipo);
         enviarEmail.execute();*/
     }
-    public boolean evaluarEmailPattern(String email)
-    {
-        return Pattern.matches(EXREGEMAIL,email);
+
+    public boolean evaluarEmailPattern(String email) {
+        return Pattern.matches(EXREGEMAIL, email);
     }
+
     @Deprecated
-    private boolean evaluarEmail(String email)
-    {
+    private boolean evaluarEmail(String email) {
         String[] vectorEmail = email.split("@");
         boolean bandera;
-        if(vectorEmail.length==2)
-        {
-            if(vectorEmail[1].equals("gmail.com"))
-            {
-                bandera=true;
-                Log.e("1","1"+bandera);
+        if (vectorEmail.length == 2) {
+            if (vectorEmail[1].equals("gmail.com")) {
+                bandera = true;
+                Log.e("1", "1" + bandera);
+            } else {
+                bandera = false;
+                Log.e("1", "2" + bandera);
             }
-            else
-            {
-                bandera=false;
-                Log.e("1","2"+bandera);
-            }
-        }
-        else
-        {
-            bandera=false;
-            Log.e("1","3"+bandera);
+        } else {
+            bandera = false;
+            Log.e("1", "3" + bandera);
         }
         return bandera;
 
     }
-    private  void cleanCasillas()
-    {
+
+    private void cleanCasillas() {
         editText_Nombre.getEditText().setText("");
         editText_Email.getEditText().setText("");
         editText_Mensaje.getEditText().setText("");
@@ -131,8 +119,8 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
         radioButton_Queja.setChecked(false);
         radioButton_Sugerencia.setChecked(false);
     }
-    private void textWachers()
-    {
+
+    private void textWachers() {
         editText_Email.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -141,12 +129,9 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!evaluarEmailPattern(charSequence.toString()))
-                {
+                if (!evaluarEmailPattern(charSequence.toString())) {
                     editText_Email.setError("Eso no es un email");
-                }
-                else
-                {
+                } else {
                     editText_Email.setError(null);
                 }
             }
@@ -164,12 +149,9 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(editText_Nombre.getEditText().getText().length()==0)
-                {
+                if (editText_Nombre.getEditText().getText().length() == 0) {
                     editText_Nombre.setError("Campo vacío");
-                }
-                else
-                {
+                } else {
                     editText_Nombre.setError(null);
                 }
             }
@@ -187,12 +169,9 @@ public class ComplaintSuggestionsActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(editText_Mensaje.getEditText().getText().length()==0)
-                {
+                if (editText_Mensaje.getEditText().getText().length() == 0) {
                     editText_Mensaje.setError("Campo vacío");
-                }
-                else
-                {
+                } else {
                     editText_Mensaje.setError(null);
                 }
             }
