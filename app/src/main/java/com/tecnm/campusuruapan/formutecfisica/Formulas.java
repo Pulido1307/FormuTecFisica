@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnPageScrollListener;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 
 import java.io.File;
 import java.util.Objects;
@@ -32,7 +34,8 @@ public class Formulas extends AppCompatActivity {
         String file = subtema+".pdf";
         Log.e("Valores ",file);
         pdfView.fromAsset(file)
-                .pages(0, 1, 2, 3, 4, 5, 6, 7, 9, 10)
+                .pages(0,1,2)
+                .scrollHandle(new DefaultScrollHandle(this))
                 .enableSwipe(true)
                 .spacing(0)
                 .load();
