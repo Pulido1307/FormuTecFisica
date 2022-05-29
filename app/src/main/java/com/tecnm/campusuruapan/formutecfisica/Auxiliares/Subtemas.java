@@ -60,7 +60,7 @@ public class Subtemas {
             "Circuito CA",
             "Ecuaciones de Maxwell",
             "Fuerza magnética sobre una corriente",
-            "Inductancia mutua",
+            "Inductancia mutua Ley de Lenz",
             "Ley de Ampere",
             "Ley de inducción de Faraday",
             "Ondas electromagnéticas"));
@@ -89,8 +89,8 @@ public class Subtemas {
             "Hidrostática"));
 
     public static List<String> optica = new ArrayList<>(Arrays.asList(
-            "Forma gaussiana ",
-            "Forma newtoniana ",
+            "Forma Gaussiana",
+            "Forma Newtoniana",
             "Lentes",
             "Ley de la iluminación",
             "Reflexión de la luz",
@@ -100,18 +100,18 @@ public class Subtemas {
             "1era Ley de la termodinámica",
             "2da Ley de la termodinámica",
             "Calor",
-            "Capacidad calorífica ",
+            "Capacidad calorífica",
             "Conversión de escalas de temperatura",
             "Corriente de calor",
-            "Dilatación térmica ",
+            "Dilatación Térmica",
             "Ecuación de un gas ideal",
             "Entalpía",
             "Entropía",
-            "Formulas complementarias",
+            "Fórmulas complementarias",
             "Ley de Carnot",
             "Ley de los gases",
             "Trabajo de expansión y compresión",
-            "Transferencia de temperatura "));
+            "Transferencia de temperatura"));
 
     public static List<String> vectores = new ArrayList<>(Arrays.asList(
             "Derivación de vectores",

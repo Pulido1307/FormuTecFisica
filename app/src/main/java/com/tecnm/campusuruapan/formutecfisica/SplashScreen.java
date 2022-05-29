@@ -39,7 +39,7 @@ public class SplashScreen extends AppCompatActivity {
 
         setInfo();
 
-        new Handler().postDelayed(() ->{
+       new Handler().postDelayed(() ->{
             try {
                 imageView_splash_Screen.setImageResource(R.drawable.formutecfis);
                 textView_datos.setVisibility(View.INVISIBLE);

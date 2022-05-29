@@ -5,6 +5,7 @@ import java.text.NumberFormat;
 
 public class Velocidad extends Magnitud{
 
+
     @Override
     public String getConversion(String valorOriginal, String operacion) {
         BigDecimal opc;
