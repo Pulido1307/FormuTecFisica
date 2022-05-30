@@ -26,12 +26,13 @@ public class Subtemas {
     public static List<String> dinamica = new ArrayList<>(Arrays.asList(
             "Cantidad de movimiento",
             "El oscilador armónico simple",
-            "Fricción por desplazamiento",
+            "Fricción por deslizamiento",
             "Ley de la conservación de la cantidad de movimiento",
             "Movimiento armónico simple",
             "Peso",
-            "Segunda ley de Newton",
-            "Tercera ley de Newton"));
+            "Primera Ley de Newton",
+            "Segunda Ley de Newton",
+            "Tercera Ley de Newton"));
 
     public static List<String> electricidad = new ArrayList<>(Arrays.asList(
             "Campo eléctrico",
@@ -40,10 +41,9 @@ public class Subtemas {
             "Circuitos eléctricos en paralelo",
             "Circuitos eléctricos en serie",
             "Corriente y resistencia eléctrica",
-            "Flujo eléctrico",
             "Fuerza electromotriz",
-            "Intensidad del C. E.",
-            "Ley de Coulomb ",
+            "Intensidad del campo eléctrico",
+            "Ley de Coulomb",
             "Ley de Gauss",
             "Ley de Joule",
             "Ley de Kirchhoff",
@@ -103,7 +103,7 @@ public class Subtemas {
             "Capacidad calorífica",
             "Conversión de escalas de temperatura",
             "Corriente de calor",
-            "Dilatación Térmica",
+            "Dilatación térmica",
             "Ecuación de un gas ideal",
             "Entalpía",
             "Entropía",
